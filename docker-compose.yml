@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    image: lendingwise-ocr-api:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./outputs:/app/outputs
+    # If running on EC2 with an IAM role, AWS creds envs can be omitted
+

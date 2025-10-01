@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+boto3
+botocore
+openai
+python-multipart
+typing-extensions
+

@@ -1,0 +1,24 @@
+{
+  "doc_type": "identity",
+  "1": {
+    "Country": "USA",
+    "State": "GEORGIA",
+    "Document Type": "DRIVER'S LICENSE",
+    "DL NO.": "056862014",
+    "DOB": "07/25/1980",
+    "CLASS": "C",
+    "EXP": "07/25/2026",
+    "Name": "DENNIS DEAN MCKINLEY JR",
+    "Address": "1150 GOODWIN PL NE, BROOKHAVEN, GA 30319-4194",
+    "County": "DEKALB",
+    "REST": "A",
+    "END": "NONE",
+    "ISS": "03/20/2023",
+    "SEX": "M",
+    "EYES": "BRO",
+    "HGT": "5'-10\"",
+    "WGT": "210 lb",
+    "DD": "521561499750020000",
+    "ORGAN DONOR": "❤️"
+  }
+}
