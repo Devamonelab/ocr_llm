@@ -1,13 +1,20 @@
+version: "3.9"
 services:
-  api:
+  doc-extract-api:
     build: .
-    image: lendingwise-ocr-api:latest
+    image: doc-extract-api:latest
+    container_name: doc-extract-api
     restart: unless-stopped
     ports:
       - "8000:8000"
-    env_file:
-      - .env
+    environment:
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      # If your EC2 has an IAM role, you can omit the keys below.
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      UVICORN_WORKERS: ${UVICORN_WORKERS:-2}
+      PORT: ${PORT:-8000}
     volumes:
       - ./outputs:/app/outputs
-    # If running on EC2 with an IAM role, AWS creds envs can be omitted
-

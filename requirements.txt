@@ -5,4 +5,4 @@ botocore
 openai
 python-multipart
 typing-extensions
-
+pydantic
